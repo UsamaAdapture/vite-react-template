@@ -8,7 +8,14 @@ declare namespace Cloudflare {
 	interface Env {
         ENV_DATA: string,
         USER_COLORS: KVNamespace,
-        AI: AI
+        AI: AI,
+        FORM_SUBMISSIONS: KVNamespace,
+        ALLOWED_ORIGINS: string
+        RESEND_API_KEY: string
+        ADMIN_EMAIL: string
+        ADMIN_PASSWORD: string
+        WEBHOOK_URL: string
+        DB: D1Database
 	}
 }
 interface Env extends Cloudflare.Env {}

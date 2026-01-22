@@ -3,7 +3,9 @@
 	"name": "vite-react-template",
 	"main": "./src/worker/index.ts",
 	"compatibility_date": "2025-10-08",
-	"compatibility_flags": ["nodejs_compat"],
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
 	"observability": {
 		"enabled": true
 	},
@@ -13,15 +15,38 @@
 		"not_found_handling": "none"
 	},
 	"vars": {
-		"ENV_DATA": "Test"
+		"ENV_DATA": "Test",
+		"ADMIN_EMAIL": "admin@example.com",
+		"ALLOWED_ORIGINS": "*"
 	},
 	"kv_namespaces": [
 		{
 			"binding": "USER_COLORS",
 			"id": "3d474629f8ac485a85d09391e1cf4d3c"
+		},
+		{
+			"binding": "FORM_SUBMISSIONS",
+			"id": "55273fe59b684d2b93ecd2dcf31accc0"
 		}
 	],
 	"ai": {
 		"binding": "AI"
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "form-users",
+			"database_id": "99d16c9a-8d46-45b2-ba1a-e140914d5bf7",
+			"remote": true
+		}
+	],
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "WEBSOCKET_ROOM",
+				"class_name": "WebSocketRoom",
+				"script_name": "vite-react-template"
+			}
+		]
 	}
 }
